@@ -9,12 +9,16 @@ program
 	.option('-e, --event [name]', '添加git事件')
 	.parse(process.argv);
 
-console.log(program.event);
+if (!program.event) {
+	throw err = new Error('添加git事件');
+	return false;
+}
 
 let requestData = {
 	event: program.event,
 	name: package.name,
 	url: package.repository.url,
+	path: '~/development/cube',
 	time: new Date().getTime()
 };
 
@@ -29,5 +33,6 @@ request({
 }, function(error, response, body) {
 	if (!error && response.statusCode == 200) {
 		console.log(body) // 请求成功的处理逻辑
+
 	}
 });
