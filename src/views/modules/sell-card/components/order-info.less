@@ -1,0 +1,112 @@
+@import '../../../../styles/variables.less';
+@import '../../../../styles/common.less';
+
+.order-info-main{
+	.ivu-table-wrapper{
+		border: none;
+		.ivu-table{font-size: 14px;
+			&::before,&::after{
+				display: none;
+			}
+			th{
+				background-color: #fff;
+			}
+			th,td{
+				border-bottom: none;text-align: center;
+			}
+			tr th:first-child,tr td:first-child{
+				text-align:left;
+				.ivu-table-cell{
+					padding-left: 22px;
+				}
+			}
+			.ivu-table-body{
+				td{
+					background-color: @table-td-hover-bg;
+				}
+			}
+		}
+	}
+	.order-remark{
+		width: 100%;display: flex;padding: 20px 0;
+		span{
+			padding: 0 16px 0 22px;word-break: keep-all;line-height: 30px;
+		}
+		.ivu-input-wrapper{
+			width: 60%;
+			textarea{
+				resize: none;font-size: 14px;
+			}
+		}
+	}
+	.header{
+		height: 40px;line-height: 1;display: flex;width: 100%;align-items: center;padding-left:22px;background-color: #f7f7f7;font-size: 16px;
+	}
+	.logistics-amount{
+		padding: 20px 20px 20px 22px;display: flex;justify-content: space-between;
+		.logistics{
+			display: flex;flex-wrap: wrap;text-align: left;
+			.logistics-type{
+				width: 100%;margin-bottom: 24px;
+			}
+			.ivu-form{
+				width: 100%;
+				.ivu-input{
+					text-overflow: ellipsis;
+				}
+			}
+			.ivu-radio-group{
+				height: 32px;
+				.ivu-radio-group-item{
+					margin-right: 12px;border-radius: 5px;border-left: 1px solid #dddee1;
+					&.ivu-radio-wrapper-checked{
+						border-color: @primary-color;
+						box-shadow: none;
+					}
+					&:before,&:after{
+						display: none;
+					}
+				}
+			}
+		}
+		.amount{
+			min-width: 200px;
+			p{
+				line-height: 34px;height: 34px;font-size: 14px;display: flex;width: 100%;word-break: keep-all;
+				span{
+					display: flex;justify-content: space-between;line-height: 34px;color:#999;width: 42px;
+				}
+				i{
+					color:#555;margin-left: 18px;
+					&.total{
+						em{
+							font-size: 20px;
+						}
+						font-size: 26px;color:#ee0000;
+					}
+				}
+			}
+		}
+	}
+}
+.address-list-modal{
+	.add-address{
+		display: flex;align-items: center;
+	}
+	.ivu-radio-group-vertical .ivu-radio-wrapper{
+		height: auto;white-space: normal;
+	}
+}
+.branches-modal{
+	.ivu-radio-group-vertical .ivu-radio-wrapper{
+		height: auto;white-space: normal;
+	}
+	.ivu-modal-footer{display: none;}
+}
+.add-address-modal{
+	.region-selector{
+		.ivu-row{
+			display: flex;
+		}
+	}
+}

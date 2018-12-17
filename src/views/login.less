@@ -1,0 +1,125 @@
+@import '../styles/base.less';
+@import '../styles/variables.less';
+
+.login-wrapper {
+	width: 100%;
+	height: 100%;
+	min-width: 1088px;
+	min-height: 690px;
+	position: relative;
+	.login {
+		width: 100%;
+		height: 100%;
+		// background: url("../images/bg.jpg") top center no-repeat;
+		// background-size: 100% 100%;
+		background-color: @primary-color;
+		position: relative;display: flex;justify-content: center;
+		.bg-particles{
+			position: absolute;z-index: 9;width: 100%;height: 100%;
+		}
+		.login-content{
+			width: 1088px;display: flex;height: 100%;position: relative;z-index: 999;
+		}
+		.logo{
+			width: 652px;display: flex;justify-content: center;align-items: center;height: 100%;
+			.logo-content{
+				display: flex;height: 180px;color:#fff;align-items: center;
+				.iconfont{
+					font-size: 140px;display: flex;height: 180px;width: 180px;line-height: 160px;justify-content: center;
+				}
+				.logo-icon{
+					height: 140px;width: 140px;
+				}
+				span{
+					width: 360px;font-size: 50px;line-height: 120px;height: 120px;display: inline-block;font-weight: bold;
+				}
+			}
+		}
+		.sign-in{text-align: center;height: 28px;margin: 0;
+			a{
+				line-height: 2;font-size: 14px;color:#fff;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+		&-con {
+			width: 436px;display: flex;align-items: center;height: 100%;
+			.ivu-card{
+				background-color: transparent;
+				&:hover{
+					box-shadow: none;
+				}
+				.ivu-card-head{
+					border: none;
+					padding: 0;
+					p{
+						line-height: 62px;height: 62px;padding-left: 24px;font-size: 20px;color:#fff;width: 100%;
+					}
+				}
+				.ivu-card-body{
+					padding:0;
+					.form-con{
+						padding:0;
+						.ivu-form-item{
+							margin-bottom: 36px;
+							.ivu-input-group,.ivu-input-group-with-prepend{
+								input{
+									height: 50px;line-height: 30px;padding:10px 20px 10px 62px;border-radius: 25px !important;font-size: 20px;color:#fff;background-color:rgba(0,0,0,0.4);border: none;width: 100%;transition: all 0.2s ease;
+									&::-webkit-input-placeholder{
+										color:#fff;opacity: 1;
+									}
+									&:focus{
+										outline: none;box-shadow: 0 0 10px rgba(0,0,0,0.4);
+									}
+								}
+								.ivu-input-group-prepend{
+									padding: 0;height: 100%;display: flex;position: absolute;font-size:30px;color:#fff;display: flex;justify-content: center;align-items: center;width: 62px;background-color:  transparent;
+									border: none;z-index: 999;
+									.ivu-icon{
+										color:#fff;
+									}
+								}
+							}
+							.ivu-btn{
+								padding:14px;font-size: 24px;line-height: 1;
+							}
+							.ivu-form-item-error-tip{
+								padding: 0;line-height: 36px;color:#fff;
+							}
+						}
+					}
+				}
+			}
+			&-header {
+				font-size: 16px;
+				font-weight: 300;
+				text-align: center;
+				padding: 30px 0;
+			}
+
+			.form-con {
+				padding: 10px 0 0;
+			}
+
+			.login-tip {
+				font-size: 10px;
+				text-align: center;
+				color: #c3c3c3;
+			}
+		}
+	}
+	footer {
+		line-height: 114px;
+		height: 114px;
+		width: 100%;
+		text-align: center;
+		font-size: 16px;
+		color: #fff;
+		position: fixed;
+		bottom: 0;
+		z-index: 99;
+		// background: url("../images/footer.jpg") top center no-repeat;
+		// background-size: 100% 100%;
+	}
+}

@@ -1,0 +1,53 @@
+@import '../../../../styles/variables.less';
+
+
+.product-details-main{
+	padding: 22px 0;display: flex;justify-content: space-between;
+	.product-pic-wrapper{
+		width: 360px;
+	}
+	.product-con-wrapper{
+		width: calc(~"100% - 360px - 22px");text-align: left;
+		.main-info{
+			padding-bottom: 10px;border-bottom: 1px dashed #ddd;
+		}
+		h1{
+			height: 42px;line-height: 42px;color:#555;font-size: 18px;font-weight: bold;
+		}
+		.info-line{
+			display: flex;height: 44px;align-items: center;
+			i{
+				display: flex;align-items: center;height: 100%;
+			}
+			&.price{
+				i{
+					color:#ee0000;font-size: 28px;
+					em{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+
+		.tag{
+			color:#999;display: flex;width: 90px;align-items: center;line-height: 1;font-size: 12px;
+			em{color: #ef2626;margin-left: 5px;font-weight:bold;}
+		}
+		.el-input-number{
+			width: 140px;margin-right: 12px;
+		}
+		.ivu-radio-group{
+			height: 32px;
+			.ivu-radio-group-item{
+				margin-right: 12px;border-radius: 5px;border-left: 1px solid #dddee1;
+				&.ivu-radio-wrapper-checked{
+					border-color: @primary-color;
+					box-shadow: none;
+				}
+				&:before,&:after{
+					display: none;
+				}
+			}
+		}
+	}
+}

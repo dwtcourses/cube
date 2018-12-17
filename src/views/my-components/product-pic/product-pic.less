@@ -1,0 +1,75 @@
+@import '../../../styles/variables.less';
+
+.product-pic-main {
+	display: flex;
+	flex-wrap: wrap;
+	height: 360px;
+	align-items: flex-start;
+	width: 360px;
+
+	.pic-preview {
+		width: 100%;
+		height: 268px;
+		border: 1px solid #F0F0F0;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.thumb-list {
+		width: 100%;
+		align-self: flex-end;
+		height: 56px;
+
+		.swiper-container {
+			padding: 0 30px;
+		}
+
+		.swiper-slide {
+			width: 56px;
+			height: 56px;
+			border: 2px solid #fff;
+			cursor: pointer;
+			&:extend(.transition-02);
+			img {
+				height: 100%;
+				width: 100%;
+			}
+			&:hover,&.active{
+				border-color:@primary-color;
+			}
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			height: 100%;
+			width: 30px;
+			display: flex;
+			align-items: center;
+			line-height: 1;
+			font-size: 30px;
+			color: #ddd;
+			margin-top: 0;
+			top: 0;
+			background-image: none;
+			&:extend(.transition-02);
+			&:hover{
+				color:@primary-color;
+			}
+		}
+
+		.swiper-button-prev {
+			background-color: #fff;
+			left: 0;
+			justify-content: flex-start;
+		}
+
+		.swiper-button-next {
+			background-color: #fff;
+			right: 0;
+			justify-content: flex-end;
+		}
+	}
+}

@@ -1,0 +1,148 @@
+@import '~iview/src/styles/index.less';
+@import '../styles/icon.less';
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+.ivu-icon {
+	font-size: 20px;
+}
+
+.ivu-cascader-arrow,
+.ivu-select-arrow {
+	margin-top: -9px;
+}
+
+.ivu-menu-vertical .ivu-menu-submenu-title-icon {
+	top: 2px;
+}
+
+.main .sidebar-menu-con .ivu-menu {
+	width: 100%;
+}
+
+.ivu-page-item-jump-next,
+.ivu-page-item-jump-prev,
+.ivu-page-next,
+.ivu-page-prev {
+	line-height: 36px;
+}
+
+.ivu-modal .ivu-modal-body {
+	position: relative;
+}
+
+.ivu-spin.ivu-spin-fix {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-wrap {
+	display: flex;
+
+	.left-side {
+		flex-basis: 240px;
+		background-color: #fff;
+		padding: 10px;
+		position: relative;
+		min-width: 200px;
+	}
+
+	.right-side {
+		flex-basis: calc(~"100% - 250px");
+		margin-left: 10px;
+	}
+}
+
+.main .sidebar-menu-con .ivu-menu-item,
+.main .sidebar-menu-con .ivu-menu-submenu {
+	// background: linear-gradient(180deg, #fdfdfd, #f0f0f0); /* 标准的语法 */
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	flex-basis: 100%;
+
+	i {
+		display: inline-block;
+		width: 30px;
+		text-align: center;
+	}
+
+	.layout-text {
+		position: static;
+	}
+
+	.ivu-menu-submenu-title {
+		width: 100%;
+		flex-basis: 100%;
+		position: relative;
+		// background: linear-gradient(180deg, #fdfdfd, #f0f0f0); /* 标准的语法 */
+		.ivu-menu-submenu-title-icon {
+			display: inline-block;
+			position: absolute;
+			right: 8px;
+			top: 16px;
+		}
+	}
+}
+
+.ivu-dropdown-transfer,
+.ivu-select-dropdown.ivu-select-dropdown-transfer {
+	z-index: 1009;
+}
+
+.detail-ing {
+	.ivu-modal-content {
+		.ivu-modal-body {
+			.ivu-input-wrapper {
+				.ivu-input {
+					border: none;
+
+					&:focus {
+						box-shadow: none;
+					}
+				}
+
+				.ivu-icon {
+					display: none;
+				}
+			}
+
+			.ivu-select-input[disabled] {
+				cursor: default;
+				color: inherit;
+			}
+
+			.ivu-select-disabled .ivu-select-selection {
+				border: none;
+				background-color: transparent;
+				cursor: default;
+				color: inherit;
+				box-shadow: none;
+
+				.ivu-icon {
+					display: none;
+				}
+
+				&:hover {
+					.ivu-icon {
+						display: none;
+					}
+				}
+			}
+
+			textarea {
+				resize: none;
+			}
+		}
+	}
+}
