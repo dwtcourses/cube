@@ -11,7 +11,7 @@
 					    <use xlink:href="#icon-mofang"></use>
 					</svg> -->
 					<i class="iconfont">&#xe74a;</i>
-					<span>物联网平台</span>
+					<span>物联网平台22222</span>
 				</div>
 				<Button :style="{transform: 'rotateZ(' + (this.shrink ? '-90' : '0') + 'deg)'}" type="text" @click="toggleClick">
 					<Icon type="navicon" size="32"></Icon>
