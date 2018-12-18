@@ -21,13 +21,11 @@ import util from './libs/util';
 import ajax from './libs/ajax';
 import appApi from './libs/appApi';
 import filter from './libs/filter';
-import directive from './libs/directive';
 import Vue2Filters from './libs/filters/index'
 
 import 'echarts/lib/component/title';
 import VeGauge from 'v-charts/lib/gauge';
 import VePie from 'v-charts/lib/pie';
-import VueParticles from 'vue-particles'
 
 import './styles/app.scss'
 
@@ -47,7 +45,6 @@ Vue.use(iView);
 Vue.use(Tree);
 Vue.use(Icon);
 Vue.use(InputNumber);
-Vue.use(VueParticles);
 Vue.use(BaiduMap, {
 	ak: 'VwLCdiW2xlLcVh0Wnt8CVKUnLh8SrcMU'
 })
@@ -55,10 +52,6 @@ Vue.use(BaiduMap, {
 
 Object.keys(filter).forEach(key => {
 	Vue.filter(key, filter[key])
-});
-
-Object.keys(directive).forEach(key => {
-	Vue.directive(key, directive[key])
 });
 
 Vue.prototype.$filter = Object.assign(filter,Vue.prototype.$filter);
