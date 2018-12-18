@@ -55,7 +55,7 @@ module.exports = merge(webpackBaseConfig, {
         // }),
         new CopyWebpackPlugin([
             {
-                from: 'td_icon.ico'
+                from: 'favicon.ico'
             },
             {
                 from: 'src/styles/fonts',
