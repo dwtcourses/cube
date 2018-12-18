@@ -19,7 +19,7 @@
 			<div class="login-con">
 				<Card :bordered="false">
 					<p slot="title">
-						用户登录1111
+						用户登录
 					</p>
 					<div class="form-con">
 						<Form ref="loginForm" :model="form" :rules="rules">
