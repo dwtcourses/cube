@@ -12,7 +12,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-receive": "node git.js -e push"
+			"post-receive": "node git.js -e push"
 		}
 	},
 	"repository": {
