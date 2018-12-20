@@ -5,15 +5,15 @@
 <template>
 <div class="login-wrapper" id="login-wrapper">
 	<div class="login" @keydown.enter="handleSubmit">
-		<vue-particles color="#fff" :particleOpacity="0.3" :particlesNumber="60" :particleSize="10" hoverMode="repulse" class="bg-particles" ></vue-particles>
+		<vue-particles color="#fff" :particleOpacity="0.3" :particlesNumber="60" :particleSize="10" hoverMode="repulse" class="bg-particles"></vue-particles>
 		<div class="login-content">
 			<div class="logo">
 				<div class="logo-content">
-					<!-- <svg class="colours-icon logo-icon" aria-hidden="true">
+					<svg class="colours-icon logo-icon" aria-hidden="true">
 					    <use xlink:href="#icon-mofang"></use>
-					</svg> -->
-					<i class="iconfont">&#xe74a;</i>
-					<span>物联网平台</span>
+					</svg>
+					<!-- <i class="iconfont">&#xe74a;</i> -->
+					<span>魔方平台</span>
 				</div>
 			</div>
 			<div class="login-con">
@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<footer>
-			物联网平台 版权所有
+			魔方平台 版权所有
 		</footer>
 	</div>
 </div>
@@ -54,8 +54,12 @@ import Cookies from 'js-cookie';
 
 import session from '@/libs/session.js';
 
+import VueParticles from '@/views/my-components/custom/vue-particles.vue';
 
 export default {
+	components: {
+		VueParticles
+	},
 	data() {
 		return {
 			loading: false,
@@ -87,7 +91,7 @@ export default {
 				if (valid) {
 					this.loading = true;
 					this.API_login(this.form).then(d => {
-						session.add('accessList',d.menuList);
+						session.add('accessList', d.menuList);
 						Cookies.set('user', d.realname);
 						Cookies.set('userName', d.username);
 						Cookies.set('userId', d.userId);

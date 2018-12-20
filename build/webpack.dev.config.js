@@ -10,7 +10,7 @@ const package = require('../package.json');
 module.exports = merge(webpackBaseConfig, {
 	devServer:{
 		host:'localhost',
-		port: 8089
+		port: 8099
 	},
     devtool: '#source-map',
     output: {

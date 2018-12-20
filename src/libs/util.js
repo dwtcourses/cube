@@ -128,7 +128,7 @@ let util = {
     }
 };
 util.title = function(title) {
-	title = title || '物联网平台';
+	title = title || '魔方平台';
 	window.document.title = title;
 };
 
